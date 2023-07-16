@@ -7,8 +7,9 @@ import type { Professor } from "@/types/formTypes"
 type formDataProps =Omit <Professor, "id">
 
 const CadastroProfessor = () =>{
-    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+    const { register, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
+          id:"",
           nome: "",
           siape: "",
           celular: "",
@@ -20,7 +21,7 @@ const CadastroProfessor = () =>{
     const router = useRouter()
     const onSubmit = async (data:formDataProps)=>{
         try{
-            const response = await fetch('https://profdemet.vercel.app/api/cadastro',{
+            const response = await fetch('https://www.mpfaraujo.com.br/api/professores.php',{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
