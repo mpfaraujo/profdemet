@@ -5,6 +5,7 @@ import { formatTel } from "@/lib/formatNumeros"
 import ProfCoord from "@/components/profPorCoord"
 import ProfTurma from "@/components/profPorTurma"
 import { Professor } from "@/types/formTypes"
+import prisma from "@/lib/prisma"
 
 async function pegaProfs() {
   //const data = await fetch('https://profdemet.vercel.app/api/listagem')
