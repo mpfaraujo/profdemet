@@ -5,12 +5,16 @@ import { formatTel } from "@/lib/formatNumeros"
 import ProfCoord from "@/components/profPorCoord"
 import ProfTurma from "@/components/profPorTurma"
 import { Professor } from "@/types/formTypes"
+import prisma from "@/lib/prisma"
+import { NextResponse } from "next/server"
 
 async function pegaProfs() {
   // const data = await fetch('https://profdemet.vercel.app/professores/api', {cache:"no-cache"})
-  const data = await fetch('http://localhost:3000/api/listagem', { cache: "no-cache" })
-  const res = await data.json()
-  return res
+  // const data = await fetch('http://localhost:3000/api/listagem', { cache: "no-cache" })
+  // const res = await data.json()
+  // return res
+  const data = await prisma.professor.findMany()
+  return data
 }
 
 const Professores = async () => {
