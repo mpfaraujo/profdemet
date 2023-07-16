@@ -20,7 +20,7 @@ const CadastroProfessor = () =>{
     const router = useRouter()
     const onSubmit = async (data:formDataProps)=>{
         try{
-            const response = await fetch('http://localhost:3000/api/cadastro',{
+            const response = await fetch('https://profdemet.vercel.app/api/cadastro',{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
