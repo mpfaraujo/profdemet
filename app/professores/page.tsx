@@ -7,10 +7,12 @@ import ProfTurma from "@/components/profPorTurma"
 import { Professor } from "@/types/formTypes"
 
 async function pegaProfs() {
-  const data = await fetch('https://profdemet.vercel.app/api/listagem')
+  //const data = await fetch('https://profdemet.vercel.app/api/listagem')
   // const data = await fetch('http://localhost:3000/api/listagem', { cache: "no-cache" })
-  const res = await data.json()
-  return res
+  //const res = await data.json()
+  //return res
+  const data = await prisma.professor.findMany()
+  return data
 }
 
 const Professores = async () => {
