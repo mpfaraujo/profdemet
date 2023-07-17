@@ -23,7 +23,7 @@ const ProfCoord = ({ profs }: propsProps) => {
 
   return (
     <>
-      <span>Escolha a Coordenação <input value={coord} onChange={(e) => setCoord(e.target.value)} className="bg-gray-300 p-2 w-[6em]" /></span><br />
+      <span>Escolha a Coordenação <input value={coord} onChange={(e) => setCoord(e.target.value)} className="bg-gray-300 p-2 w-[6em] dark:bg-gray-700 dark:text-gray-100" /></span><br />
       {coord !== '' && (
         <Table>
           <TableCaption>Lista dos Professores da {coord}</TableCaption>

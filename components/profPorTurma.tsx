@@ -21,7 +21,7 @@ const ProfTurma = ({ profs }: propsProps) => {
   
     return (
       <>
-        <span>Escolha a Turma <input value={turma} onChange={(e) => setTurma(e.target.value)} className="bg-gray-300 p-2 w-[6em]" /></span><br />
+        <span>Escolha a Turma <input value={turma} onChange={(e) => setTurma(e.target.value)} className="bg-gray-300 p-2 w-[6em]  dark:bg-gray-700 dark:text-gray-100" /></span><br />
         {turma !== '' && (
           <Table>
             <TableCaption>Lista dos professores da turma {turma}</TableCaption>
