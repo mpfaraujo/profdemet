@@ -8,10 +8,6 @@ import { Professor } from "@/types/formTypes"
 import prisma from "@/lib/prisma"
 
 async function pegaProfs() {
-  //const data = await fetch('https://profdemet.vercel.app/api/listagem')
-  // const data = await fetch('http://localhost:3000/api/listagem', { cache: "no-cache" })
-  //const res = await data.json()
-  //return res
   const data = await fetch('https://www.mpfaraujo.com.br/api/professores.php', {next:{revalidate:60}})
   const res = data.json()
   return res
